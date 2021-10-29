@@ -11,15 +11,16 @@ public class Bank {
     }
 
     public Szamla szamlaNyitas(Tulajdonos tulajdonos, int hitelKeret) {
+        Szamla retSzamla;
+
         if (hitelKeret == 0) {
-            MegtakaritasiSzamla Msz = new MegtakaritasiSzamla(tulajdonos);
-            szamlaLista.add(Msz);
-            return Msz;
+            retSzamla = new MegtakaritasiSzamla(tulajdonos);
         } else {
-            HitelSzamla Hsz = new HitelSzamla(tulajdonos, hitelKeret);
-            szamlaLista.add(Hsz);
-            return Hsz;
+            retSzamla = new HitelSzamla(tulajdonos, hitelKeret);
         }
+
+        szamlaLista.add(retSzamla);
+        return retSzamla;
     }
 
     public int getOszzEgyenleg(Tulajdonos tulajdonos) {
