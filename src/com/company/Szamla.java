@@ -2,7 +2,7 @@ package com.company;
 
 public class Szamla extends BankiSzolgaltatas{
 
-    private int aktualisEgyenleg;
+    protected int aktualisEgyenleg;
 
     public Szamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
