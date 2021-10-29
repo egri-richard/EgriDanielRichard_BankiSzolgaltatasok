@@ -2,13 +2,13 @@ package com.company;
 
 public abstract class BankiSzolgaltatas {
 
-    private Tulajdonos t;
+    private Tulajdonos tulajdonos;
 
-    public BankiSzolgaltatas(Tulajdonos t) {
-        this.t = t;
+    public BankiSzolgaltatas(Tulajdonos tulajdonos) {
+        this.tulajdonos = tulajdonos;
     }
 
-    public Tulajdonos getT() {
-        return t;
+    public Tulajdonos getTulajdonos() {
+        return tulajdonos;
     }
 }

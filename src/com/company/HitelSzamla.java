@@ -1,0 +1,26 @@
+package com.company;
+
+public class HitelSzamla extends Szamla{
+
+    private int hitelKeret;
+
+    public HitelSzamla(Tulajdonos tulajdonos, int hitelKeret) {
+        super(tulajdonos);
+        this.hitelKeret = hitelKeret;
+    }
+
+    public int getHitelKeret() {
+        return hitelKeret;
+    }
+
+    @Override
+    public boolean kivesz(int osszeg) {
+        boolean success = false;
+
+        if ((getAktualisEgyenleg() - osszeg) > (hitelKeret * -1)) {
+            success = true;
+        }
+
+        return success;
+    }
+}
