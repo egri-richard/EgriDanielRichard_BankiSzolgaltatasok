@@ -20,4 +20,8 @@ public class Szamla extends BankiSzolgaltatas{
         return false;
     }
 
+    public Kartya UjKartya(String kartyaSzam) {
+        return new Kartya(this.getTulajdonos(), this, kartyaSzam);
+    }
+
 }
